@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{CE4B1263-04CC-4A58-B9B2-33A58552CF46}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Hydna.Net20</RootNamespace>
-    <AssemblyName>Hydna.Net20</AssemblyName>
+    <RootNamespace>Hydna.Net</RootNamespace>
+    <AssemblyName>Hydna.Net</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
