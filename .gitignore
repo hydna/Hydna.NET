@@ -1,4 +1,4 @@
 *.userprefs
 *.pidb
 src/Hydna.Net/obj/*
-src/Hydna.Net/bin/*
+bin/*
