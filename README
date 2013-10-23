@@ -1,0 +1,44 @@
+.NET bindings for Hydna
+=======================
+
+
+Current version only supports Hydna Push.
+
+
+Example
+-------
+
+Quick example how to send data to a specific channel using C#:
+
+      using Hydna.Net;
+
+      // Create a new HttpApiClient
+      HttpApiClient client = HttpApiClient.create("public.hydna.net");
+
+      // Send a "Hello world" message to the channel.
+      client.Send("Hello world from C#");
+
+
+Qucik exmaple how to send data a specific channel Async using C#:
+
+      using Hydna.Net;
+
+      // Create a new HttpApiClient
+      HttpApiClient client = HttpApiClient.create("public.hydna.net");
+
+      // Begin the send async operation channel.
+      IAsyncResult result = client.BeginSend("Hello world from C#", null, null);
+
+      // Wait for the response
+      result.AsyncWaitHandle.WaitOne();
+
+      // End the async operation.
+      client.EndSend(result);
+
+
+
+Future goals
+------------
+
+- Full support for bi-directional Hydna Channels
+- Support for .NET 2 or higher, Silverlight, Windows Phone and Windows 8
