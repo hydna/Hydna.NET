@@ -1,4 +1,6 @@
 *.userprefs
 *.pidb
+*.nupkg
 src/Hydna.Net/obj/*
 bin/*
+lib/*
