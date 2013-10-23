@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Hydna.Net</id>
+    <owners>Hydna AB</owners>
+    <copyright>Copyright 2013 (c) Hydna AB</copyright>
+    <version>0.1.0</version>
+    <title>Hydna.NET</title>
+    <description>.NET bindings for hydna</description>
+    <authors>Hydna AB</authors>
+    <language>en-US</language>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>    
+    <projectUrl>https://www.hydna.com</projectUrl>
+    <licenseUrl>https://raw.github.com/hydna/Hydna.NET/master/LICENSE</licenseUrl>
+    <tags>hydna realtime real time networking</tags>
+  </metadata>
+  <files>
+    <file src="lib/net20/Hydna.Net.dll" target="lib/net20" />
+    <file src="lib/net45/Hydna.Net.dll" target="lib/net45" />
+  </files>
+</package>
