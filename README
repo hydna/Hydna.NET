@@ -1,14 +1,25 @@
-.NET bindings for Hydna
-=======================
+# .NET bindings for Hydna
+
+This first version of our client library for .NET implements support for the
+Hydna Push API. Future versions will include support for the full set of
+features.
+
+More info: https://www.hydna.com/
+
+## Installation
+
+Install the package NuGet via terminal:
+
+    mono nuget.exe install hydna.net
+
+Or via Package Manager Console:
+
+    PM> Install-Package Hydna.Net 
 
 
-Current version only supports Hydna Push.
+## Usage
 
-
-Example
--------
-
-Quick example how to send data to a specific channel using C#:
+Example how to send data to a specific channel using C#:
 
       using Hydna.Net;
 
@@ -19,7 +30,7 @@ Quick example how to send data to a specific channel using C#:
       client.Send("Hello world from C#");
 
 
-Qucik exmaple how to send data a specific channel Async using C#:
+Example how to send data a specific channel Async using C#:
 
       using Hydna.Net;
 
@@ -36,9 +47,7 @@ Qucik exmaple how to send data a specific channel Async using C#:
       client.EndSend(result);
 
 
-
-Future goals
-------------
+## Future goals
 
 - Full support for bi-directional Hydna Channels
 - Support for .NET 2 or higher, Silverlight, Windows Phone and Windows 8
