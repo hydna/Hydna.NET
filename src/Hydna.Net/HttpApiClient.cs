@@ -511,7 +511,6 @@ namespace Hydna.Net
 
             if (exception != null)
             {
-                Console.WriteLine(exception.GetType());
                 throw new HttpApiException(exception);
             }
         }
@@ -562,7 +561,6 @@ namespace Hydna.Net
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.GetType());
                 CompleteApiCall(exception, null);
                 return;
             }
@@ -592,7 +590,6 @@ namespace Hydna.Net
             byte[] data = null;
 
             // TODO: Check that we are dealing with UTF8-data
-            Console.WriteLine(response.StatusCode);
             if (response.StatusCode == HttpStatusCode.BadRequest &&
                 response.ContentLength > 0)
             {
