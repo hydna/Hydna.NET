@@ -488,7 +488,8 @@ namespace Hydna.Net
                                             "operation is not available.");
             }
 
-            if (currentAsyncResult.IsCompleted == false)
+            if (currentAsyncResult != null &&
+                currentAsyncResult.IsCompleted == false)
             {
                 exception = new WebException("Aborted",
                                              WebExceptionStatus.RequestCanceled);
@@ -532,8 +533,8 @@ namespace Hydna.Net
             }
 
             stream.Write(currentProgressResult.data,
-                currentProgressResult.offset,
-                    currentProgressResult.length);
+                         currentProgressResult.offset,
+                         currentProgressResult.length);
 
             stream.Close();
 
