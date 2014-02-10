@@ -2,5 +2,6 @@
 *.pidb
 *.nupkg
 src/Hydna.Net/obj/*
+src/Hydna.Net.Tests/obj/*
 bin/*
 lib/*
