@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{99B1365E-B9AF-4495-B89F-47A1FE12D9FC}") = "Hydna.Net30", "Hydna.Net\Hydna.Net30.csproj", "{05B7ADF1-0EFF-436A-86AB-C92154DB918F}"
+EndProject
+Project("{99B1365E-B9AF-4495-B89F-47A1FE12D9FC}") = "Hydna.Net30.Tests", "Hydna.NET.Tests\Hydna.Net30.Tests.csproj", "{1083DCFC-AD54-4742-BA3C-BE6655DE0688}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		Default|Any CPU = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1083DCFC-AD54-4742-BA3C-BE6655DE0688}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1083DCFC-AD54-4742-BA3C-BE6655DE0688}.Debug|x86.Build.0 = Debug|Any CPU
+		{1083DCFC-AD54-4742-BA3C-BE6655DE0688}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{1083DCFC-AD54-4742-BA3C-BE6655DE0688}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{1083DCFC-AD54-4742-BA3C-BE6655DE0688}.Release|x86.ActiveCfg = Release|Any CPU
+		{1083DCFC-AD54-4742-BA3C-BE6655DE0688}.Release|x86.Build.0 = Release|Any CPU
+		{05B7ADF1-0EFF-436A-86AB-C92154DB918F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{05B7ADF1-0EFF-436A-86AB-C92154DB918F}.Debug|x86.Build.0 = Debug|Any CPU
+		{05B7ADF1-0EFF-436A-86AB-C92154DB918F}.Release|x86.ActiveCfg = Release|Any CPU
+		{05B7ADF1-0EFF-436A-86AB-C92154DB918F}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Hydna.Net\Hydna.Net30.csproj
+	EndGlobalSection
+EndGlobal
