@@ -5,8 +5,9 @@ namespace Hydna.Net
     /// <summary>
     /// The mode that channel is, or should be opened in.
     /// </summary>
-    public enum ChannelMode : byte {
-
+    [Flags]
+    public enum ChannelMode : byte
+    {
         /// <summary>
         /// Indicates that only signals are recivied on the Channel.
         /// </summary>
