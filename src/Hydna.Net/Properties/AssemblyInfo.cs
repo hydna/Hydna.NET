@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("Hydna AB")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Hydna AB")]
+[assembly: AssemblyCopyright ("(c) Hydna AB 2013-2014")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
