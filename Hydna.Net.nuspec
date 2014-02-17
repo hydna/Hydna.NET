@@ -16,6 +16,9 @@
   </metadata>
   <files>
     <file src="lib/net20/Hydna.Net.dll" target="lib/net20" />
+    <file src="lib/net30/Hydna.Net.dll" target="lib/net30" />
+    <file src="lib/net35/Hydna.Net.dll" target="lib/net35" />
+    <file src="lib/net40/Hydna.Net.dll" target="lib/net40" />
     <file src="lib/net45/Hydna.Net.dll" target="lib/net45" />
   </files>
 </package>
