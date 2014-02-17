@@ -4,7 +4,7 @@
     <id>Hydna.Net</id>
     <owners>Hydna AB</owners>
     <copyright>Copyright 2013 (c) Hydna AB</copyright>
-    <version>0.1.0</version>
+    <version>0.8.0</version>
     <title>Hydna.NET</title>
     <description>.NET bindings for hydna</description>
     <authors>Hydna AB</authors>
