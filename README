@@ -1,8 +1,6 @@
 # .NET bindings for Hydna
 
-This first version of our client library for .NET implements support for the
-Hydna Push API. Future versions will include support for the full set of
-features.
+Full bindings for Hydna's bi-directional and push protocols.
 
 More info: https://www.hydna.com/
 
@@ -17,9 +15,60 @@ Or via Package Manager Console:
     PM> Install-Package Hydna.Net 
 
 
+## Compatibility
+
+- Full support for .NET 2.0 - 4.5
+- Full support in Unity (both Free and Pro)
+
+Please not that support for Silverlight, Windows Phone and Windows 8 is planed
+and will be released shortly.
+
+## Bindings for Unity
+
+Please see https://github.com/hydna/hydna-unity-plugin for more information.
+
 ## Usage
 
-Example how to send data to a specific channel using C#:
+
+Example using a full bi-directional channel:
+
+        static Channel channel;
+
+        public static void Main(string[] args) 
+        {
+            channel = new Channel();
+
+            channel.Connect("http://public.hydna.net/", ChannelMode.ReadWrite);
+
+            channel.Open += c_Open;
+            channel.Data += c_Data;
+            channel.Closed += c_Closed;
+
+            while (channel != null)
+                Thread.SpinWait(1);
+        }
+
+        static void c_Open(object sender, ChannelEventArgs e)
+        {
+            Console.WriteLine("Channel is now open: " + e.Text);
+            channel.Send("Hello world");
+        }
+
+        static void c_Data(object sender, ChannelEventArgs e)
+        {
+            Console.WriteLine("Received data: " + e.Text);
+            channel.Close();
+        }
+
+        static void c_Closed(object sender, ChannelCloseEventArgs e)
+        {
+            Console.WriteLine("Channel is now closed, bye..");
+            channel = null;
+        }
+
+
+
+Example how to send data (via Push) to a specific channel using C#:
 
       using Hydna.Net;
 
@@ -30,7 +79,7 @@ Example how to send data to a specific channel using C#:
       client.Send("Hello world from C#");
 
 
-Example how to send data a specific channel Async using C#:
+Example how to send data (via Push) a specific channel Async using C#:
 
       using Hydna.Net;
 
@@ -71,8 +120,3 @@ commmand line:
 
         $ mozroots --import --ask-remove --machine
         $ certmgr -ssl https://testing.hydna.net
-
-
-## Future goals
-
-- Support for .NET 2 or higher, Silverlight, Windows Phone and Windows 8
