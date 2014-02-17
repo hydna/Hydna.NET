@@ -424,6 +424,9 @@ namespace Hydna.Net
 
         void receiveLength(ReceiveState state)
         {
+            if (_closing || _disposed)
+                return;
+
             int offset = state == null ? 0 : 1;
 
             state = state == null ? new ReceiveState() : state;
@@ -437,6 +440,9 @@ namespace Hydna.Net
 
         void receive(ReceiveState state)
         {
+            if (_closing || _disposed)
+                return;
+
             _stream.BeginRead(state.data,
                               state.offset,
                               state.length - state.offset,
