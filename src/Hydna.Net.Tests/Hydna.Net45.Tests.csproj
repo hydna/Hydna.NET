@@ -5,17 +5,17 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A02B7B90-E54F-41F0-98D2-1EE37A5FB4F1}</ProjectGuid>
+    <ProjectGuid>{A810AE84-BA8D-4986-A83F-DA1CD3206C7A}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Hydna.Net</RootNamespace>
-    <AssemblyName>Hydna.Net</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>Hydna.Net.Tests</RootNamespace>
+    <AssemblyName>Hydna.Net.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\lib\net40</OutputPath>
+    <OutputPath>..\..\lib\net45</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -23,27 +23,32 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\lib\net40</OutputPath>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\lib\net45</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HttpApiClient.cs" />
-    <Compile Include="HttpApiException.cs" />
-    <Compile Include="Channel.cs" />
-    <Compile Include="ChannelMode.cs" />
-    <Compile Include="ChannelState.cs" />
-    <Compile Include="ChannelEventArgs.cs" />
-    <Compile Include="Connection.cs" />
-    <Compile Include="Frame.cs" />
-    <Compile Include="IConnectionAdapter.cs" />
-    <Compile Include="TcpClientAdapter.cs" />
+    <Compile Include="HttpApiClientTest.cs" />
+    <Compile Include="BaseTest.cs" />
+    <Compile Include="ChannelBurstTest.cs" />
+    <Compile Include="ChannelSignalTest.cs" />
+    <Compile Include="ChannelCloseDataTest.cs" />
+    <Compile Include="ChannelOpenTest.cs" />
+    <Compile Include="ChannelTlsTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Hydna.Net\Hydna.Net45.csproj">
+      <Project>{D824F5F1-450F-4B47-AD68-D21FF0E4DD85}</Project>
+      <Name>Hydna.Net45</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

@@ -5,6 +5,8 @@ Project("{99B1365E-B9AF-4495-B89F-47A1FE12D9FC}") = "Hydna.Net30", "Hydna.Net\Hy
 EndProject
 Project("{99B1365E-B9AF-4495-B89F-47A1FE12D9FC}") = "Hydna.Net30.Tests", "Hydna.NET.Tests\Hydna.Net30.Tests.csproj", "{1083DCFC-AD54-4742-BA3C-BE6655DE0688}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydna.Net.Examples.HelloWorld", "Hydna.Net.Examples\Hydna.Net30.Examples.HelloWorld.csproj", "{82126BB7-AF29-4A7B-836C-F09867839487}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -22,6 +24,12 @@ Global
 		{05B7ADF1-0EFF-436A-86AB-C92154DB918F}.Debug|x86.Build.0 = Debug|Any CPU
 		{05B7ADF1-0EFF-436A-86AB-C92154DB918F}.Release|x86.ActiveCfg = Release|Any CPU
 		{05B7ADF1-0EFF-436A-86AB-C92154DB918F}.Release|x86.Build.0 = Release|Any CPU
+		{82126BB7-AF29-4A7B-836C-F09867839487}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{82126BB7-AF29-4A7B-836C-F09867839487}.Debug|x86.Build.0 = Debug|Any CPU
+		{82126BB7-AF29-4A7B-836C-F09867839487}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{82126BB7-AF29-4A7B-836C-F09867839487}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{82126BB7-AF29-4A7B-836C-F09867839487}.Release|x86.ActiveCfg = Release|Any CPU
+		{82126BB7-AF29-4A7B-836C-F09867839487}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Hydna.Net\Hydna.Net30.csproj

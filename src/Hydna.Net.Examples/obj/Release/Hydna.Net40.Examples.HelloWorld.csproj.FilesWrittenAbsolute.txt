@@ -1,0 +1,3 @@
+/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples/obj/Release/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/jfd/workspace/Hydna.NET/bin/net40/Hydna.Net.Examples.HelloWorld.exe
+/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples/obj/Release/Hydna.Net.Examples.HelloWorld.exe

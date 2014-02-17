@@ -1,0 +1,5 @@
+/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/jfd/workspace/Hydna.NET/bin/net40/Hydna.Net.Examples.HelloWorld.exe.mdb
+/Users/jfd/workspace/Hydna.NET/bin/net40/Hydna.Net.Examples.HelloWorld.exe
+/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples/obj/Debug/Hydna.Net.Examples.HelloWorld.exe
+/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples/obj/Debug/Hydna.Net.Examples.HelloWorld.exe.mdb

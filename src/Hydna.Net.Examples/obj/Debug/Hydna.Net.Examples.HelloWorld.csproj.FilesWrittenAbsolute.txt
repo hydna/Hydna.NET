@@ -1,0 +1,10 @@
+/Users/jfd/workspace/Hydna.NET/lib/examples/Hydna.Net.Examples.HelloWorld.dll.mdb
+/Users/jfd/workspace/Hydna.NET/lib/examples/Hydna.Net.Examples.HelloWorld.dll
+/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples.HelloWorld/obj/Debug/Hydna.Net.Examples.HelloWorld.dll
+/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples.HelloWorld/obj/Debug/Hydna.Net.Examples.HelloWorld.dll.mdb
+/Users/jfd/workspace/Hydna.NET/lib/examples/Hydna.Net.Examples.HelloWorld.exe.mdb
+/Users/jfd/workspace/Hydna.NET/lib/examples/Hydna.Net.Examples.HelloWorld.exe
+/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples.HelloWorld/obj/Debug/Hydna.Net.Examples.HelloWorld.exe
+/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples.HelloWorld/obj/Debug/Hydna.Net.Examples.HelloWorld.exe.mdb
+/Users/jfd/workspace/Hydna.NET/bin/Hydna.Net.Examples.HelloWorld.exe.mdb
+/Users/jfd/workspace/Hydna.NET/bin/Hydna.Net.Examples.HelloWorld.exe

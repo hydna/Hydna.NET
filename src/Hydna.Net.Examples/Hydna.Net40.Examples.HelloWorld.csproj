@@ -5,17 +5,17 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A02B7B90-E54F-41F0-98D2-1EE37A5FB4F1}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Hydna.Net</RootNamespace>
-    <AssemblyName>Hydna.Net</AssemblyName>
+    <ProjectGuid>{D1A59C19-910A-458F-B7B5-7D8F9E3E711D}</ProjectGuid>
+    <OutputType>exe</OutputType>
+    <RootNamespace>Hydna.Net.Examples</RootNamespace>
+    <AssemblyName>Hydna.Net.Examples.HelloWorld</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\lib\net40</OutputPath>
+    <OutputPath>..\..\bin\net40</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\lib\net40</OutputPath>
+    <OutputPath>..\..\bin\net40</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -33,17 +33,13 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HttpApiClient.cs" />
-    <Compile Include="HttpApiException.cs" />
-    <Compile Include="Channel.cs" />
-    <Compile Include="ChannelMode.cs" />
-    <Compile Include="ChannelState.cs" />
-    <Compile Include="ChannelEventArgs.cs" />
-    <Compile Include="Connection.cs" />
-    <Compile Include="Frame.cs" />
-    <Compile Include="IConnectionAdapter.cs" />
-    <Compile Include="TcpClientAdapter.cs" />
+    <Compile Include="HelloWorld.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Hydna.Net\Hydna.Net40.csproj">
+      <Project>{A02B7B90-E54F-41F0-98D2-1EE37A5FB4F1}</Project>
+      <Name>Hydna.Net40</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
