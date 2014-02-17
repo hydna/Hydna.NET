@@ -84,9 +84,9 @@ namespace Hydna.Net
             _routes = new Dictionary<uint, Channel>();
 
             _adapter = new TcpClientAdapter();
-            _adapter.OnConnect += connectHandler;
-            _adapter.OnClose += closeHandler;
-            _adapter.OnFrame += frameHandler;
+            _adapter.OnConnect = connectHandler;
+            _adapter.OnClose = closeHandler;
+            _adapter.OnFrame = frameHandler;
             _adapter.Connect(uri);
 
             _openQueue = new Queue<Channel>();
@@ -349,9 +349,9 @@ namespace Hydna.Net
         void close()
         {
             if (_adapter != null) {
-                _adapter.OnConnect -= connectHandler;
-                _adapter.OnClose -= closeHandler;
-                _adapter.OnFrame -= frameHandler;
+                _adapter.OnConnect = null;
+                _adapter.OnClose = null;
+                _adapter.OnFrame = null;
                 _adapter.Close();
                 _adapter = null;
             }

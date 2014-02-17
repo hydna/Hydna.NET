@@ -20,22 +20,38 @@ namespace Hydna.Net
         /// <summary>
         /// Open is triggered once that channel is open.
         /// </summary>
-        public event EventHandler<ChannelEventArgs> Open;
+        public event EventHandler<ChannelEventArgs> Open
+        {
+            add { _openInvoker += value; }
+            remove { _openInvoker -= value; }
+        }
 
         /// <summary>
         /// Data is triggered once that channel recevies data.
         /// </summary>
-        public event EventHandler<ChannelDataEventArgs> Data;
+        public event EventHandler<ChannelDataEventArgs> Data
+        {
+            add { _dataInvoker += value; }
+            remove { _dataInvoker -= value; }
+        }
 
         /// <summary>
         /// Signal is triggered once that channel recevies a signal.
         /// </summary>
-        public event EventHandler<ChannelEventArgs> Signal;
+        public event EventHandler<ChannelEventArgs> Signal
+        {
+            add { _signalInvoker += value; }
+            remove { _signalInvoker -= value; }
+        }
 
         /// <summary>
         /// Close is triggered once that channel is closed. 
         /// </summary>
-        public event EventHandler<ChannelCloseEventArgs> Closed;
+        public event EventHandler<ChannelCloseEventArgs> Closed
+        {
+            add { _closedInvoker += value; }
+            remove { _closedInvoker -= value; }
+        }
  
         internal byte[] token = null;
         internal ContentType ctoken = ContentType.Utf;
@@ -48,6 +64,11 @@ namespace Hydna.Net
         private Uri _uri = null;
         private ChannelMode _mode = ChannelMode.Listen;
         private ChannelState _state = ChannelState.Closed;
+
+        EventHandler<ChannelEventArgs> _openInvoker;
+        EventHandler<ChannelDataEventArgs> _dataInvoker;
+        EventHandler<ChannelEventArgs> _signalInvoker;
+        EventHandler<ChannelCloseEventArgs> _closedInvoker;
 
         private Connection _connection;
 
@@ -538,36 +559,36 @@ namespace Hydna.Net
 
             _state = ChannelState.Open;
 
-            if (Open == null)
+            if (_openInvoker == null)
                 return;
 
             ChannelEventArgs e;
             e = new ChannelEventArgs(frame.ContentType, frame.Payload);
 
-            Open(this, e);
+            _openInvoker(this, e);
         }
 
         internal void handleData(Frame frame)
         {
-            if (Data == null)
+            if (_dataInvoker == null)
                 return;
 
             ChannelDataEventArgs e;
             e = new ChannelDataEventArgs(frame.ContentType,
                                          frame.Payload,
                                          frame.PriorityFlag);
-            Data(this, e);
+            _dataInvoker(this, e);
         }
 
         internal void handleSignal(Frame frame)
         {
-            if (Signal == null)
+            if (_signalInvoker == null)
                 return;
 
             ChannelEventArgs e;
             e = new ChannelEventArgs(frame.ContentType,
                                      frame.Payload);
-            Signal(this, e);
+            _signalInvoker(this, e);
         }
 
         internal void handleClose(Frame frame)
@@ -589,7 +610,7 @@ namespace Hydna.Net
             _state = ChannelState.Closed;
             _ptr = 0;
 
-            if (Closed == null)
+            if (_closedInvoker == null)
                 return;
 
             ChannelCloseEventArgs e;
@@ -609,7 +630,7 @@ namespace Hydna.Net
                                               reason);
             }
 
-            Closed(this, e);
+            _closedInvoker(this, e);
         }
     }
 }

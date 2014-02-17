@@ -38,9 +38,9 @@ namespace Hydna.Net
 
         const string protocolVersion = "winksock/1";
 
-        event ConnectEventHandler OnConnect;
-        event CloseEventHandler OnClose;
-        event FrameEventHandler OnFrame;
+        private ConnectEventHandler _connectInvoker;
+        private CloseEventHandler _closeInvoker;
+        private FrameEventHandler _frameInvoker;
 
         private TcpClient _client;
         private Stream _stream;
@@ -103,23 +103,38 @@ namespace Hydna.Net
             shutdown(null);
         }
 
-        event ConnectEventHandler IConnectionAdapter.OnConnect
-        {
-            add { OnConnect += value; }
-            remove { OnConnect -= value; }
-        }
+        ConnectEventHandler IConnectionAdapter.OnConnect {
+            get { return _connectInvoker; }
+            set { _connectInvoker = value ; }
+        } 
 
-        event CloseEventHandler IConnectionAdapter.OnClose
-        {
-            add { OnClose += value; }
-            remove { OnClose -= value; }
-        }
+        FrameEventHandler IConnectionAdapter.OnFrame {
+            get { return _frameInvoker; }
+            set { _frameInvoker = value ; }
+        } 
 
-        event FrameEventHandler IConnectionAdapter.OnFrame
-        {
-            add { OnFrame += value; }
-            remove { OnFrame -= value; }
-        }
+        CloseEventHandler IConnectionAdapter.OnClose {
+            get { return _closeInvoker; }
+            set { _closeInvoker = value ; }
+        } 
+
+        // event ConnectEventHandler IConnectionAdapter.OnConnect
+        // {
+        //     add { OnConnect += value; }
+        //     remove { OnConnect -= value; }
+        // }
+        // 
+        // event CloseEventHandler IConnectionAdapter.OnClose
+        // {
+        //     add { OnClose += value; }
+        //     remove { OnClose -= value; }
+        // }
+        // 
+        // event FrameEventHandler IConnectionAdapter.OnFrame
+        // {
+        //     add { OnFrame += value; }
+        //     remove { OnFrame -= value; }
+        // }
 
         void resolvedHandler (IAsyncResult ar)
         {
@@ -320,10 +335,8 @@ namespace Hydna.Net
                 return;
             }
 
-            if (OnConnect != null)
-            {
-                OnConnect();
-            }
+            if (_connectInvoker != null)
+                _connectInvoker();
 
             receiveLength(null);
         }
@@ -393,8 +406,8 @@ namespace Hydna.Net
 
             Frame frame = Frame.Create(state.data);
 
-            if (OnFrame != null)
-                OnFrame(frame);
+            if (_frameInvoker != null)
+                _frameInvoker(frame);
 
             receiveLength(null);
         }
@@ -412,8 +425,8 @@ namespace Hydna.Net
             _closing = false;
             _disposed = true;
 
-            if (OnClose != null)
-                OnClose(reason);
+            if (_closeInvoker != null)
+                _closeInvoker(reason);
         }
 
         void processSendState(SendState state)

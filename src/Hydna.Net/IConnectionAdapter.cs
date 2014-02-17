@@ -8,9 +8,9 @@ namespace Hydna.Net
     
     interface IConnectionAdapter : IDisposable
     {       
-        event ConnectEventHandler OnConnect;
-        event CloseEventHandler OnClose;
-        event FrameEventHandler OnFrame;
+        ConnectEventHandler OnConnect { get; set; }
+        CloseEventHandler OnClose  { get; set; }
+        FrameEventHandler OnFrame  { get; set; }
 
         void Connect (Uri uri);
         void Send (Frame frame);
