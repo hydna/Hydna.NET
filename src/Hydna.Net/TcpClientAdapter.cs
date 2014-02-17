@@ -118,24 +118,6 @@ namespace Hydna.Net
             set { _closeInvoker = value ; }
         } 
 
-        // event ConnectEventHandler IConnectionAdapter.OnConnect
-        // {
-        //     add { OnConnect += value; }
-        //     remove { OnConnect -= value; }
-        // }
-        // 
-        // event CloseEventHandler IConnectionAdapter.OnClose
-        // {
-        //     add { OnClose += value; }
-        //     remove { OnClose -= value; }
-        // }
-        // 
-        // event FrameEventHandler IConnectionAdapter.OnFrame
-        // {
-        //     add { OnFrame += value; }
-        //     remove { OnFrame -= value; }
-        // }
-
         void resolvedHandler (IAsyncResult ar)
         {
             IPHostEntry entry;
