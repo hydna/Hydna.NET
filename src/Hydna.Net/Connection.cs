@@ -86,7 +86,7 @@ namespace Hydna.Net
             #if HYDNA_UNITY
                 _adapter = new ReflectClientAdapter();
             #else
-                _adapter = new TcpClientAdapter();                
+                _adapter = new TcpClientAdapter();
             #endif
 
             _adapter.OnConnect = connectHandler;
