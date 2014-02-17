@@ -1,2 +1,0 @@
-/Users/jfd/workspace/Hydna.NET/bin/net20/Hydna.Net.Examples.HelloWorld.exe
-/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples/obj/Release/Hydna.Net.Examples.HelloWorld.exe

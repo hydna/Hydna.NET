@@ -1,4 +1,0 @@
-/Users/jfd/workspace/Hydna.NET/bin/net30/Hydna.Net.Examples.HelloWorld.exe.mdb
-/Users/jfd/workspace/Hydna.NET/bin/net30/Hydna.Net.Examples.HelloWorld.exe
-/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples/obj/Debug/Hydna.Net.Examples.HelloWorld.exe
-/Users/jfd/workspace/Hydna.NET/src/Hydna.Net.Examples/obj/Debug/Hydna.Net.Examples.HelloWorld.exe.mdb
