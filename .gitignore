@@ -3,5 +3,6 @@
 *.nupkg
 src/Hydna.Net/obj/*
 src/Hydna.Net.Tests/obj/*
+src/Hydna.Net.Examples/obj/*
 bin/*
 lib/*
