@@ -46,8 +46,33 @@ Example how to send data a specific channel Async using C#:
       // End the async operation.
       client.EndSend(result);
 
+## Testing
+
+All tests are predefined to run against `testing.hydna.net`.
+
+### Test using mono
+
+A simple Makefile is included which can be used to invoke the embedded test
+suite.
+
+To run the test suite for .Net 2.0, call:
+
+    $ make test20
+
+To run all test, for all version, call:
+
+    $ make test
+
+### Test SSL in mono
+
+You need to add the certificate for the domain to test against. In order to
+test against **testing.hydna.net**, run the following commands from the
+commmand line:
+
+        $ mozroots --import --ask-remove --machine
+        $ certmgr -ssl https://testing.hydna.net
+
 
 ## Future goals
 
-- Full support for bi-directional Hydna Channels
 - Support for .NET 2 or higher, Silverlight, Windows Phone and Windows 8
