@@ -3,7 +3,7 @@ NUNIT=nunit-console
 
 CONFIGURATION?=Release
 
-all: net20 net30 net35 net40 net45
+all: net20 net30 net35 net40 net45 unity
 
 net20:
 	$(BUILD) /p:Configuration=$(CONFIGURATION) src/Hydna.Net20.sln
