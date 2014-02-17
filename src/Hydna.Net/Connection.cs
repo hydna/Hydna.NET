@@ -83,7 +83,12 @@ namespace Hydna.Net
             _channels = new Dictionary<string, Channel>();
             _routes = new Dictionary<uint, Channel>();
 
-            _adapter = new TcpClientAdapter();
+            #if HYDNA_UNITY
+                _adapter = new ReflectClientAdapter();
+            #else
+                _adapter = new TcpClientAdapter();                
+            #endif
+
             _adapter.OnConnect = connectHandler;
             _adapter.OnClose = closeHandler;
             _adapter.OnFrame = frameHandler;

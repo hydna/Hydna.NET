@@ -20,6 +20,9 @@ net40:
 net45:
 	$(BUILD) /p:Configuration=$(CONFIGURATION) src/Hydna.Net45.sln
 
+unity:
+	$(BUILD) /p:Configuration=$(CONFIGURATION) /p:DefineConstants="HYDNA_UNITY" src/Hydna.NetUnity.sln
+
 test: test20 test30 test35 test40 test45
 
 test20: net20
